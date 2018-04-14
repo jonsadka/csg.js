@@ -1585,9 +1585,9 @@ const unicodeToHersheyDefn = {
   '': ' 3926 43L[RNOPOORNTMWOWSRU RTNVOVS RRNUPUSTT RRUWWW]V_U`SaQaO`MaObQa RVWV^U_ RPaNa RTVUWU^T`Sa'
 }
 
-function hersheyCodeFromChar(character) {
-  return unicodeToHersheyDefn[character] ?
-    unicodeToHersheyDefn[character] :
+function hersheyCodeFromChar(char) {
+  return unicodeToHersheyDefn[char] ?
+    unicodeToHersheyDefn[char] :
     { width: 0, segments: [] }
 }
 
@@ -1620,7 +1620,7 @@ function hershey_vector_char(x, y, char) {
     return { width: 0, segments: [] }
   }
 
-  if (character === ' ') {
+  if (char === ' ') {
     return { width: 16, segments: [] }
   }
 
