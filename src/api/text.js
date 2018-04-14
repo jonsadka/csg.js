@@ -1588,7 +1588,7 @@ const unicodeToHersheyDefn = {
 function hersheyCodeFromChar(character) {
   return unicodeToHersheyDefn[character] ?
     unicodeToHersheyDefn[character] :
-    return { width: 0, segments: [] }
+    { width: 0, segments: [] }
 }
 
 function hersheyCodeToPoints(x, y, code) {
