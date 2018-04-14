@@ -1659,7 +1659,7 @@ function hershey_vector_text (x, y, string) {
     if (char === '\n') {
       x = x0; y -= 30
     } else {
-      let d = vector_char(x, y, char)
+      let d = hershey_vector_char(x, y, char)
       x += d.width
       output = output.concat(d.segments)
     }
@@ -2267,6 +2267,8 @@ const simplexFont = [
 ]
 
 module.exports = {
+  hershey_vector_char,
+  hershey_vector_text,
   vector_char: hershey_vector_char,
   vector_text: hershey_vector_text
 }
