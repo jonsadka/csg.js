@@ -2267,8 +2267,6 @@ const simplexFont = [
 ]
 
 module.exports = {
-  hershey_vector_char,
-  hershey_vector_text,
-  vector_char,
-  vector_text
+  vector_char: hershey_vector_char,
+  vector_text: hershey_vector_text
 }
