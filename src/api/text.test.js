@@ -1,5 +1,5 @@
 const test = require('ava')
-const { vector_text, vector_char } = require('./text')
+const { hershey_vector_char, hershey_vector_text, vector_text, vector_char } = require('./text')
 
 test('vector_char', t => {
   const obs = vector_char(0, 2, 'O')
@@ -29,6 +29,16 @@ test('vector_char', t => {
   t.deepEqual(obs.segments, expSegments)
 })
 
+// 37°48'18.9"N
+test('hershey_vector_char', t => {
+  const chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'O']
+  chars.forEach(char => {
+    const vectorChar = vector_char(0, 0, char)
+    const hersheyVectorChar = hershey_vector_char(0, 0, char)
+    t.deepEqual(vectorChar, hersheyVectorChar)
+  })
+})
+
 test('vector_text', t => {
   const obs = vector_text(0, 0, 'Hi')
   const exp = [ [ [ 4, 21 ], [ 4, 0 ] ],
@@ -38,4 +48,11 @@ test('vector_text', t => {
     [ [ 26, 14 ], [ 26, 0 ] ] ]
 
   t.deepEqual(obs, exp)
+})
+
+test('hershey_vector_text', t => {
+  const word = 'Hi';
+  const vectorWord = vector_text(0, 0, word)
+  const hersheyVectorWord = hershey_vector_text(0, 0, word)
+  t.deepEqual(vectorWord, hersheyVectorWord)
 })
