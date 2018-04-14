@@ -1586,7 +1586,9 @@ const unicodeToHersheyDefn = {
 }
 
 function hersheyCodeFromChar(character) {
-  return unicodeToHersheyDefn[character];
+  return unicodeToHersheyDefn[character] ?
+    unicodeToHersheyDefn[character] :
+    return { width: 0, segments: [] }
 }
 
 function hersheyCodeToPoints(x, y, code) {
@@ -1614,10 +1616,15 @@ function hersheyCodeToPoints(x, y, code) {
 }
 
 function hershey_vector_char(x, y, char) {
+  if (!char) {
+    return { width: 0, segments: [] }
+  }
+
+  if (character === ' ') {
+    return { width: 16, segments: [] }
+  }
+
   const hersheyCode = hersheyCodeFromChar(char);
-  console.log('~~char', char)
-  console.log('~~hersheyCode', hersheyCode)
-  // TODO: handle mising hershey code
   return hersheyCodeToPoints(x, y, hersheyCode);
 }
 
