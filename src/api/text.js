@@ -1615,6 +1615,9 @@ function hersheyCodeToPoints(x, y, code) {
 
 function hershey_vector_char(x, y, char) {
   const hersheyCode = hersheyCodeFromChar(char);
+  console.log('~~code', code)
+  console.log('~~hersheyCode', hersheyCode)
+  // TODO: handle mising hershey code
   return hersheyCodeToPoints(x, y, hersheyCode);
 }
 
