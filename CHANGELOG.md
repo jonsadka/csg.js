@@ -1,3 +1,30 @@
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/jscad/csg.js/compare/v0.6.0...v0.7.0) (2018-09-01)
+
+
+### Features
+
+* **path:** Add getTurn()  method to determine the general turn direction of a path. ([#116](https://github.com/jscad/csg.js/issues/116)) ([4cd83fa](https://github.com/jscad/csg.js/commit/4cd83fa))
+
+
+
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/jscad/csg.js/compare/v0.5.4...v0.6.0) (2018-06-21)
+
+
+### Bug Fixes
+
+* **2d shape factories:** fix fromNestedPointsArray([#103](https://github.com/jscad/csg.js/issues/103)) ([729d459](https://github.com/jscad/csg.js/commit/729d459))
+* **polygon:** params custom paths ([#104](https://github.com/jscad/csg.js/issues/104)) ([7d93db8](https://github.com/jscad/csg.js/commit/7d93db8))
+
+
+### Features
+
+* **2d polygons:** add support for polygons (2D) with holes([#101](https://github.com/jscad/csg.js/issues/101)) ([22f8f80](https://github.com/jscad/csg.js/commit/22f8f80))
+* **vector_text/char:** big overhaul & additions to the vector_text/ char system ([#107](https://github.com/jscad/csg.js/issues/107)) ([eadcd58](https://github.com/jscad/csg.js/commit/eadcd58))
+
+
+
 <a name="0.5.4"></a>
 ## [0.5.4](https://github.com/jscad/csg.js/compare/v0.5.3...v0.5.4) (2018-03-16)
 
